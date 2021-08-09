@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'mycss/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Ajax CRUD</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row  bg-red-400 px-3 py-3 shadow-md"><h2 class="heading text-white text-lg subpixel-antialiased font-semibold tracking-wider text-opacity-50">Django Function Based View Ajax CRUD Operation</h2></div>
+        <div class="row border" style="margin-top: 20px;">
+            <div class="col-sm-4 px-2 py-2 ">
+                <div class="bg-green-400 px-3 py-3 text-lg subpixel-antialiased font-semibold tracking-wider text-opacity-50"><h4 class="text-white">Add/Update Student Details</h4></div>
+                
+                <form action="" method="POST" id="myform">
+                    {% csrf_token %}
+                    <input type="hidden" name="userid" id="hiddenid">
+                    {{form.as_p}}
+                    <input type="button" id="btnsave" value="Save">
+                    <input type="button" id="btnclear" value="Clear">
+                </form>
+
+            </div>
+            <div class="col-sm-8 px-2 py-2">
+                <div class="bg-green-400 px-3 py-3 text-lg subpixel-antialiased font-semibold tracking-wider text-opacity-50"><h4 class="text-white">Student Details</h4></div>
+                <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
+                    <table class="table table-bordered">
+                        <thead id="table-thead">
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Join Date & Time</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <div class="table-responsive">
+                        <tbody id='table-body'>
+                            {% for data in record %}
+                            <tr>
+                                <td id='dataid'>{{data.id}}</td>
+                                <td>{{data.name}}</td>
+                                <td>{{data.email}}</td>
+                                <td>{{data.createdatetime}}</td>
+                                <td>
+                                    <input type="button" id="btnedit" value="Edit" data-id={{data.id}}>
+                                    <input type="button" id="btndelete" value="Delete" data-id={{data.id}}>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+            <div class='alert alert-success px-2 py-2' id='msg-success' style='display:none;'>Successfully save</div>
+            <div class='alert alert-danger px-2 py-2' id='msg-delete' style='display:none;'></div>
+
+            <!-- Vertically centered modal -->
+            <div class="modal-dialog modal-dialog-centered" id='my-model' style="display: none;">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Are you sure you want delete record ?.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-danger">Yes I'm sure</button>
+                      </div>
+                    </div>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/javascript.js' %}"></script>
+</body>
+</html>

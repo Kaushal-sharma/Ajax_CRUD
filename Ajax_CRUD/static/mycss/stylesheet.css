@@ -1,0 +1,149 @@
+/* h2{
+    color: black;
+    border: 1px solid #ccc;
+    background-color: rgb(225, 255, 247);
+    padding: 10px;
+    margin: 10px;
+}
+
+h4{
+    color: black;
+    border: 1px solid #ccc;
+    background-color: rgb(255, 228, 242);
+    padding: 10px;
+    margin: 10px;
+} */
+
+#myform{
+    padding: 10px;
+    margin: 10px;
+}
+#nameid, #emailid, #passwordid{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+}
+#nameid:focus, #emailid:focus, #passwordid:focus{
+    
+    box-shadow: none;
+    border-top: 1px solid rgb(2, 114, 219);
+    border-left: 1px solid rgb(2, 114, 219);
+    border-right: 1px solid rgb(2, 114, 219);
+    border-bottom: 1px solid rgb(2, 114, 219) !important; 
+} 
+input.error{
+    box-shadow: none;
+    border-top: 1px solid rgb(219, 2, 2);
+    border-left: 1px solid rgb(219, 2, 2);
+    border-right: 1px solid rgb(219, 2, 2);
+    border-bottom: 1px solid rgb(219, 2, 2) !important;
+}
+input.error_clear{
+    box-shadow: none;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc !important;
+}
+/* #nameid, #emailid, #passwordid{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+}
+#nameid:focus, #emailid:focus, #passwordid:focus{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    border-bottom: 1px solid rgb(2, 114, 219);
+} */
+
+#btnsave{
+    border: none;
+    --tw-bg-opacity: 1;
+    background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+    color: white;
+    padding: 8px;
+    width: 80px;
+    margin-top: 10px;
+    font-size: 15px;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+#btnsave:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+    cursor: pointer;
+}
+
+#btnclear{
+    border: none;
+    color: white;
+    --tw-bg-opacity: 1;
+    background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+    padding: 8px;
+    width: 80px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 15px;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+#btnclear:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+    cursor: pointer;
+}
+
+#btnedit{
+    border: none;
+    color: rgb(253, 253, 253);
+    --tw-bg-opacity: 1;
+    background-color: rgba(251, 191, 36, var(--tw-bg-opacity));
+    padding: 5px;
+    width: 60px;
+    margin-top: 10px;
+    font-size: 15px;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+#btnedit:hover{
+    color: white;
+    --tw-bg-opacity: 1;
+    background-color: rgba(245, 158, 11, var(--tw-bg-opacity));
+}
+#btndelete{
+    border: none;
+    color: white;
+    --tw-bg-opacity: 1;
+    background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
+    padding: 5px;
+    width: 70px;
+    margin-top: 10px;
+    font-size: 15px;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+#btndelete:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+    cursor: pointer;
+    color:white;
+}
+
+.my-custom-scrollbar{
+    position: relative;
+    height: 337px;
+    overflow: auto;
+}
+
+#table-thead{
+    position: sticky;
+    top:0; 
+    background-color: white;
+    box-shadow: 4px 4px 4px 4px rgba(212, 205, 205, 0.19)
+}
